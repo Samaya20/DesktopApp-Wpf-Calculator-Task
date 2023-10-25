@@ -1,0 +1,102 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="541" Width="337" Background="#FFE6E6E6" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="322"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#F3F3F3" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Images/menubar-btn.jpg" Width="30" Height="30" Grid.Row="0" Grid.Column="0"/>
+            <Label FontWeight="SemiBold" Grid.Row="0" Grid.Column="1" FontSize="22" Margin="0 4" Content="Standard"/>
+            <Image Source="Images\restore-btn.jpg" Grid.Row="0" Grid.Column="3" Margin="57,10,-89,10" RenderTransformOrigin="0.5,1.028"/>
+        </Grid>
+
+        <Label Background="#F3F3F3" FontWeight="SemiBold" VerticalAlignment="Bottom" HorizontalContentAlignment="Right" Grid.Row="1" Content="0" FontSize="50"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button BorderThickness="0" Grid.Column="0" Grid.Row="2" FontSize="14" Background="Transparent" Foreground="silver" Content="MC"/>
+            <Button BorderThickness="0" Grid.Column="1" Grid.Row="2" FontSize="14" Background="Transparent" Foreground="silver" Content="MR"/>
+            <Button BorderThickness="0" Grid.Column="2" Grid.Row="2" FontSize="14" Background="Transparent" Content="M+"/>
+            <Button BorderThickness="0" Grid.Column="3" Grid.Row="2" FontSize="14" Background="Transparent" Content="M-"/>
+            <Button BorderThickness="0" Grid.Column="4" Grid.Row="2" FontSize="14" Background="Transparent" Content="MS"/>
+            <Button BorderThickness="0" Grid.Column="5" Grid.Row="2" FontSize="14" Background="Transparent" Foreground="silver" Content="Mv"/>
+        </Grid>
+
+        <Grid Background="#F3F3F3" Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="0" Grid.Row="5" Background="White" Margin="1">
+                <StackPanel>
+                    <Image Source="Images/Plus_or_minus_symbol.png" Width="20" Height="20"/>
+                </StackPanel>
+            </Button>
+            
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="1" Grid.Row="5" Content="0" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="2" Grid.Row="5" Content="." Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="3" Grid.Row="5" Content="=" Foreground="Black" Background="#FFE6E6E6" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="0" Grid.Row="4" Content="1" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="1" Grid.Row="4" Content="2" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="2" Grid.Row="4" Content="3" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="3" Grid.Row="4" Content="+" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="0" Grid.Row="3" Content="4" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="1" Grid.Row="3" Content="5" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="2" Grid.Row="3" Content="6" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="3" Grid.Row="3" Content="-" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="0" Grid.Row="2" Content="7" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="1" Grid.Row="2" Content="8" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="2" Grid.Row="2" Content="9" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="3" Grid.Row="2" Content="×" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="0" Grid.Row="1" Content="1/x" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="1" Grid.Row="1" Content="x²" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="2" Grid.Row="1" Content="√x" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="3" Grid.Row="1" Content="÷" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="18" Grid.Column="0" Grid.Row="0" Content="%" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="17" Grid.Column="1" Grid.Row="0" Content="CE" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="17" Grid.Column="2" Grid.Row="0" Content="C" Background="White" Margin="1"/>
+            <Button BorderThickness="0.5" FontSize="20" Grid.Column="3" Grid.Row="0" Background="White" Margin="1">
+                <StackPanel>
+                    <Image Source="Images/delete-btn.png" Width="20" Height="20"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+
+</Window>
